@@ -307,6 +307,16 @@ border-radius:22px;
 
 }
 
+#apply{
+    font-size: 20px;
+}
+
+.submit{
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+
+}
 .date{
 
 width:70px;

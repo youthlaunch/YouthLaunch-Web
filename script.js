@@ -11,6 +11,7 @@ const contactBtn = document.getElementById("contact");
 const askBtn = document.getElementById("ask");
 const teamBtn = document.getElementById("team");
 const eventBtn = document.getElementById("event");
+const applyBtn = document.getElementById("apply");
 
 const homeBtn = document.getElementById("home");
 const searchBtn = document.getElementById("search");
@@ -199,7 +200,7 @@ if (askBtn) {
     askBtn.addEventListener("click", () => {
 
         window.open(
-"https://docs.google.com/forms/d/e/1FAIpQLSdxb4ZE326vZECHd-r2R1YbVoSdVpvL94y-k9NWoDn85Vg3rg/viewform?usp=dialog   "     );
+        "https://docs.google.com/forms/d/e/1FAIpQLSdxb4ZE326vZECHd-r2R1YbVoSdVpvL94y-k9NWoDn85Vg3rg/viewform?usp=dialog   "     );
 
     });
 }
@@ -359,16 +360,16 @@ if (eventBtn) {
                     <div class="event-card">
 
                         <div class="event-date">
-                            <span class="event-month">AUG</span>
-                            <span class="event-day">30</span>
+                            <span class="event-month">NOV</span>
+                            <span class="event-day">26</span>
                         </div>
 
                         <div class="event-info">
 
-                            <h2>YouthLaunch Launch Event</h2>
+                            <h2>YouthTank</h2>
 
                             <p class="event-details">
-                                📅 August 30, 2026
+                                📅 November 26, 2026
                             </p>
 
                             <p class="event-details">
@@ -376,68 +377,39 @@ if (eventBtn) {
                             </p>
 
                             <p>
-                                Join us as we officially launch
-                                YouthLaunch and begin building a
-                                community of young entrepreneurs,
-                                leaders, and innovators.
+                                Join us for our first event, YouthTank, where students will pitch their ideas to a panel of judges for a chance to win prizes and mentorship.
+                                More details on our instagram page @launchatyouth. Register at the link : ---- 
+                    
                             </p>
-
-                            <a
-                                href="#"
-                                class="event-button"
-                            >
-                                Learn More
-                            </a>
+            
 
                         </div>
 
                     </div>
 
 
-                    <div class="event-card">
-
-                        <div class="event-date">
-                            <span class="event-month">SEP</span>
-                            <span class="event-day">12</span>
-                        </div>
-
-                        <div class="event-info">
-
-                            <h2>Youth Entrepreneurship Workshop</h2>
-
-                            <p class="event-details">
-                                📅 September 12, 2026
-                            </p>
-
-                            <p class="event-details">
-                                📍 Location TBA
-                            </p>
-
-                            <p>
-                                Learn how to take an idea from the
-                                brainstorming stage to something
-                                real.
-                            </p>
-
-                            <a
-                                href="#"
-                                class="event-button"
-                            >
-                                Learn More
-                            </a>
-
-                        </div>
-
-                    </div>
+                    
 
 
-                </div>
+      
 
             </div>
         `;
     });
 }
-const logo = document.querySelector(".logo");
-logo.addEventListener("click", () => {
-    showHomeScreen();
-});
+if (applyBtn) {
+    applyBtn.addEventListener("click", () => {
+        hideHomeScreen();
+        content.innerHTML = `
+            <div class="apply-page">
+                <h1>Apply to YouthLaunch</h1>
+                <p class="apply-intro">
+                    Ready to join our community of innovators and changemakers? Fill out the application form below!
+                </p>
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSdb6Q8LWGFda-E6kq4aKv525K_IIS3zFtdAw9yqsSQPA3pnfg/viewform?usp=publish-editor" method="get" target="_blank">
+                    <button type="submit" class="submit">Apply Now</button>
+                </form>
+            </div>
+        `;
+    });
+}
